@@ -31,17 +31,22 @@ public class ProfessorService {
     }
 
     public List<Professor> listarTodos() {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'listarTodos'");
     }
 
     public Object buscarPorId(Long id) {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'buscarPorId'");
     }
 
     public Object atualizar(Long id, Professor professor) {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'atualizar'");
+    }
+
+    public Professor salvar(Professor professor) {
+        throw new UnsupportedOperationException("Unimplemented method 'salvar'");
+    }
+
+    public void excluir(Long id) {
+        throw new UnsupportedOperationException("Unimplemented method 'excluir'");
     }
 }

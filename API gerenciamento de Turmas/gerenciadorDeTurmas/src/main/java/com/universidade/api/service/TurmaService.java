@@ -31,18 +31,23 @@ public class TurmaService {
     }
 
     public List<Turma> listarTodas() {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'listarTodas'");
     }
 
-    public Object buscarPorId(Long id) {
-        // TODO Auto-generated method stub
+    public Optional<Turma> buscarPorId(Long id) {
         throw new UnsupportedOperationException("Unimplemented method 'buscarPorId'");
     }
 
-    public Object atualizar(Long id, Turma turma) {
-        // TODO Auto-generated method stub
+    public Turma atualizar(Long id, Turma turma) {
         throw new UnsupportedOperationException("Unimplemented method 'atualizar'");
+    }
+
+    public Turma salvar(Turma turma) {
+        throw new UnsupportedOperationException("Unimplemented method 'salvar'");
+    }
+
+    public void excluir(Long id) {
+        throw new UnsupportedOperationException("Unimplemented method 'excluir'");
     }
 }
 

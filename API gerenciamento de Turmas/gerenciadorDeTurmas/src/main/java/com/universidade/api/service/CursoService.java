@@ -31,17 +31,17 @@ public class CursoService {
     }
 
     public List<Curso> listarTodos() {
-        // TODO Auto-generated metodo
+
         throw new UnsupportedOperationException("Unimplemented method 'listarTodos'");
     }
 
     public Object buscarPorId(Long id) {
-        // TODO Auto-generated metodo
+
         throw new UnsupportedOperationException("Unimplemented method 'buscarPorId'");
     }
 
     public Object atualizar(Long id, Curso curso) {
-        // TODO Auto-generated metodo
+
         throw new UnsupportedOperationException("Unimplemented method 'atualizar'");
     }
 }
