@@ -49,7 +49,7 @@ public class ProfessorController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletar(@PathVariable Long id) {
-        professorService.deletar(id);
+        professorService.deleteById(id);
         return ResponseEntity.noContent().build();
     }
 }

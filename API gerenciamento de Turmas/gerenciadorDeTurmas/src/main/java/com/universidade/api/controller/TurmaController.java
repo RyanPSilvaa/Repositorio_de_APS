@@ -4,6 +4,7 @@ import java.util.List;
 import com.universidade.api.model.Turma;
 import com.universidade.api.service.TurmaService;
 
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,7 +50,7 @@ public class TurmaController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletar(@PathVariable Long id) {
-        turmaService.deletar(id);
+        turmaService.deleteById(id);
         return ResponseEntity.noContent().build();
     }
 }

@@ -29,4 +29,19 @@ public class EstudanteService {
     public void deleteById(Long id) {
         repository.deleteById(id);
     }
+
+    public List<Estudante> listarTodos() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'listarTodos'");
+    }
+
+    public Object buscarPorId(Long id) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'buscarPorId'");
+    }
+
+    public Object atualizar(Long id, Estudante estudante) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'atualizar'");
+    }
 }
