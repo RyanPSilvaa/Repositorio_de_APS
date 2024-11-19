@@ -1,8 +1,8 @@
 package com.universidade.api.controller;
 
 import java.util.List;
-import com.universidade.api.model.Estudante;
-import com.universidade.api.service.EstudanteService;
+import com.universidade.api.model.Curso;
+import com.universidade.api.service.CursoService;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,40 +17,40 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/estudantes")
-public class EstudanteController {
-    
+@RequestMapping("/cursos")
+public class CursoController {
+
     @Autowired
-    private EstudanteService estudanteService;
+    private CursoService cursoService;
 
     @PostMapping
-    public ResponseEntity<Estudante> criarEstudante(@RequestBody Estudante estudante) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(estudanteService.salvar(estudante));
+    public ResponseEntity<Curso> criarCurso(@RequestBody Curso curso) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(cursoService.salvar(curso));
     }
 
     @GetMapping
-    public List<Estudante> listarTodos() {
-        return estudanteService.listarTodos();
+    public List<Curso> listarTodos() {
+        return cursoService.listarTodos();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Estudante> buscarPorId(@PathVariable Long id) {
-        return estudanteService.buscarPorId(id)
+    public ResponseEntity<Curso> buscarPorId(@PathVariable Long id) {
+        return cursoService.buscarPorId(id)
             .map(ResponseEntity::ok)
             .orElse(ResponseEntity.notFound().build());
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Estudante> atualizar(@PathVariable Long id, @RequestBody Estudante estudante) {
-        return estudanteService.atualizar(id, estudante)
+    public ResponseEntity<Curso> atualizar(@PathVariable Long id, @RequestBody Curso curso) {
+        return cursoService.atualizar(id, curso)
             .map(ResponseEntity::ok)
             .orElse(ResponseEntity.notFound().build());
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletar(@PathVariable Long id) {
-        estudanteService.deletar(id);
+        cursoService.deleteById(id);
         return ResponseEntity.noContent().build();
     }
-
 }
+

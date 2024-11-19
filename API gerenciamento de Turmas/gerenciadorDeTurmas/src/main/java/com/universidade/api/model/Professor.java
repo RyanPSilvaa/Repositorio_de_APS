@@ -6,18 +6,17 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
-
+import jakarta.persistence.OneToMany;
 
 @Entity
-public class Estudante {
+public class Professor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    private String email;
+    private String departamento;
 
-    @ManyToMany(mappedBy = "estudantes")
+    @OneToMany(mappedBy = "professor")
     private List<Turma> turmas;
 
     public Long getId() {
@@ -36,12 +35,12 @@ public class Estudante {
         this.nome = nome;
     }
 
-    public String getEmail() {
-        return email;
+    public String getDepartamento() {
+        return departamento;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setDepartamento(String departamento) {
+        this.departamento = departamento;
     }
 
     public List<Turma> getTurmas() {
@@ -51,5 +50,7 @@ public class Estudante {
     public void setTurmas(List<Turma> turmas) {
         this.turmas = turmas;
     }
+
+    
 
 }

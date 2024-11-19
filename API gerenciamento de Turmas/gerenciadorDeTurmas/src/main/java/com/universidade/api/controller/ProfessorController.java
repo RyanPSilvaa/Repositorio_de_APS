@@ -1,8 +1,8 @@
 package com.universidade.api.controller;
 
 import java.util.List;
-import com.universidade.api.model.Estudante;
-import com.universidade.api.service.EstudanteService;
+import com.universidade.api.model.Professor;
+import com.universidade.api.service.ProfessorService;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,40 +17,40 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/estudantes")
-public class EstudanteController {
-    
+@RequestMapping("/professores")
+public class ProfessorController {
+
     @Autowired
-    private EstudanteService estudanteService;
+    private ProfessorService professorService;
 
     @PostMapping
-    public ResponseEntity<Estudante> criarEstudante(@RequestBody Estudante estudante) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(estudanteService.salvar(estudante));
+    public ResponseEntity<Professor> criarProfessor(@RequestBody Professor professor) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(professorService.salvar(professor));
     }
 
     @GetMapping
-    public List<Estudante> listarTodos() {
-        return estudanteService.listarTodos();
+    public List<Professor> listarTodos() {
+        return professorService.listarTodos();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Estudante> buscarPorId(@PathVariable Long id) {
-        return estudanteService.buscarPorId(id)
+    public ResponseEntity<Professor> buscarPorId(@PathVariable Long id) {
+        return professorService.buscarPorId(id)
             .map(ResponseEntity::ok)
             .orElse(ResponseEntity.notFound().build());
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Estudante> atualizar(@PathVariable Long id, @RequestBody Estudante estudante) {
-        return estudanteService.atualizar(id, estudante)
+    public ResponseEntity<Professor> atualizar(@PathVariable Long id, @RequestBody Professor professor) {
+        return professorService.atualizar(id, professor)
             .map(ResponseEntity::ok)
             .orElse(ResponseEntity.notFound().build());
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletar(@PathVariable Long id) {
-        estudanteService.deletar(id);
+        professorService.deletar(id);
         return ResponseEntity.noContent().build();
     }
-
 }
+

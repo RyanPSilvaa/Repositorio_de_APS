@@ -1,8 +1,8 @@
 package com.universidade.api.controller;
 
 import java.util.List;
-import com.universidade.api.model.Estudante;
-import com.universidade.api.service.EstudanteService;
+import com.universidade.api.model.Turma;
+import com.universidade.api.service.TurmaService;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,40 +17,40 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/estudantes")
-public class EstudanteController {
-    
+@RequestMapping("/turmas")
+public class TurmaController {
+
     @Autowired
-    private EstudanteService estudanteService;
+    private TurmaService turmaService;
 
     @PostMapping
-    public ResponseEntity<Estudante> criarEstudante(@RequestBody Estudante estudante) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(estudanteService.salvar(estudante));
+    public ResponseEntity<Turma> criarTurma(@RequestBody Turma turma) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(turmaService.salvar(turma));
     }
 
     @GetMapping
-    public List<Estudante> listarTodos() {
-        return estudanteService.listarTodos();
+    public List<Turma> listarTodas() {
+        return turmaService.listarTodas();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Estudante> buscarPorId(@PathVariable Long id) {
-        return estudanteService.buscarPorId(id)
+    public ResponseEntity<Turma> buscarPorId(@PathVariable Long id) {
+        return turmaService.buscarPorId(id)
             .map(ResponseEntity::ok)
             .orElse(ResponseEntity.notFound().build());
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Estudante> atualizar(@PathVariable Long id, @RequestBody Estudante estudante) {
-        return estudanteService.atualizar(id, estudante)
+    public ResponseEntity<Turma> atualizar(@PathVariable Long id, @RequestBody Turma turma) {
+        return turmaService.atualizar(id, turma)
             .map(ResponseEntity::ok)
             .orElse(ResponseEntity.notFound().build());
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletar(@PathVariable Long id) {
-        estudanteService.deletar(id);
+        turmaService.deletar(id);
         return ResponseEntity.noContent().build();
     }
-
 }
+

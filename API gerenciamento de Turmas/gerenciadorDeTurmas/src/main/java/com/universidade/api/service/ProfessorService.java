@@ -3,27 +3,27 @@ package com.universidade.api.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.universidade.api.model.Estudante;
-import com.universidade.api.repository.EstudanteRepository;
+import com.universidade.api.model.Professor;
+import com.universidade.api.repository.ProfessorRepository;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class EstudanteService {
+public class ProfessorService {
     @Autowired
-    private EstudanteRepository repository;
+    private ProfessorRepository repository;
 
-    public List<Estudante> findAll() {
+    public List<Professor> findAll() {
         return repository.findAll();
     }
 
-    public Optional<Estudante> findById(Long id) {
+    public Optional<Professor> findById(Long id) {
         return repository.findById(id);
     }
 
-    public Estudante save(Estudante estudante) {
-        return repository.save(estudante);
+    public Professor save(Professor professor) {
+        return repository.save(professor);
     }
 
     public void deleteById(Long id) {
