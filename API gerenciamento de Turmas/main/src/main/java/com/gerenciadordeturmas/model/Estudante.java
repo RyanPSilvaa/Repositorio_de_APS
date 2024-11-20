@@ -1,4 +1,4 @@
-package com.universidade.api.model;
+package com.gerenciadordeturmas.model;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.universidade.api.controller;
+package com.gerenciadordeturmas.controller;
 
 import java.util.List;
 
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.universidade.api.model.Turma;
-import com.universidade.api.service.TurmaService;
+import com.gerenciadordeturmas.model.Turma;
+import com.gerenciadordeturmas.service.TurmaService;
 
 @RestController
 @RequestMapping("/turmas")

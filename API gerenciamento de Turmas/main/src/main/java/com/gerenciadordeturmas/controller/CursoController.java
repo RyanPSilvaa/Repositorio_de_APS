@@ -1,10 +1,10 @@
-package com.universidade.api.controller;
+package com.gerenciadordeturmas.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.universidade.api.model.Curso;
-import com.universidade.api.repository.CursoRepository;
+import com.gerenciadordeturmas.model.Curso;
+import com.gerenciadordeturmas.repository.CursoRepository;
 
 import java.util.List;
 import java.util.Optional;

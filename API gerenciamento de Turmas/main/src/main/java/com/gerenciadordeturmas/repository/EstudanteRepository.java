@@ -1,8 +1,8 @@
-package com.universidade.api.repository;
+package com.gerenciadordeturmas.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.universidade.api.model.Estudante;
+import com.gerenciadordeturmas.model.Estudante;
 
 public interface EstudanteRepository extends JpaRepository<Estudante, Long> {
     

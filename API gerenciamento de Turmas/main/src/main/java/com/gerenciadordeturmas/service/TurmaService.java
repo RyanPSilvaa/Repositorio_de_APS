@@ -1,4 +1,4 @@
-package com.universidade.api.service;
+package com.gerenciadordeturmas.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.universidade.api.model.Turma;
-import com.universidade.api.repository.TurmaRepository;
+import com.gerenciadordeturmas.model.Turma;
+import com.gerenciadordeturmas.repository.TurmaRepository;
 
 @Service
 public class TurmaService {

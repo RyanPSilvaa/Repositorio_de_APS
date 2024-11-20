@@ -1,4 +1,4 @@
-package com.universidade.api.controller;
+package com.gerenciadordeturmas.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.universidade.api.model.Estudante;
-import com.universidade.api.service.EstudanteService;
+import com.gerenciadordeturmas.model.Estudante;
+import com.gerenciadordeturmas.service.EstudanteService;
 
 import java.util.List;
 
