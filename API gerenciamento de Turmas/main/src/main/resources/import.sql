@@ -1,22 +1,21 @@
 
 
 
-INSERT INTO CURSO(nome) VALUES ('Engenharia de Software'), ('Ciência da Computação');
+INSERT INTO CURSO(NOME) VALUES ('Engenharia de Software'), ('Licenciatura da Computação'), ('Design e Computação');
 
-INSERT INTO PROFESSOR(nome, email) VALUES ('Prof. João', 'joao@universidade.com'), ('Prof. Ana', 'ana@universidade.com');
+INSERT INTO PROFESSOR(NOME, EMAIL) VALUES ('Prof. João', 'joao@universidade.com'), ('Prof. Ana', 'ana@universidade.com');
 
-INSERT INTO TURMA(nome, curso_id, professor_id) VALUES 
+INSERT INTO TURMA(NOME, CURSO_ID, PROFESSOR_ID) VALUES 
 ('Turma A', 1, 1), 
 ('Turma B', 2, 2);
 
-INSERT INTO Estudante (nome, email, turma_id) VALUES
-('Estudante 1', 'estudante1@teste.com', 1),
-('Estudante 2', 'estudante2@teste.com', 1),
-('Estudante 3', 'estudante3@teste.com', 1),
-('Estudante 4', 'estudante4@teste.com', 1),
-('Estudante 5', 'estudante5@teste.com', 1),
-('Estudante 6', 'estudante6@teste.com', 2),
-('Estudante 7', 'estudante7@teste.com', 2),
-('Estudante 8', 'estudante8@teste.com', 2),
-('Estudante 9', 'estudante9@teste.com', 2),
-('Estudante 10', 'estudante10@teste.com', 2);
+INSERT INTO Estudante (NOME, ID, EMAIL) VALUES
+('estudante1@teste.com', 1, 'Estudante TESTE 001'),
+('estudante2@teste.com', 2, 'Estudante TESTE 002'),
+('estudante3@teste.com', 3, 'Estudante TESTE 003'),
+('estudante4@teste.com', 4, 'Estudante TESTE 004'),
+('estudante5@teste.com', 5, 'Estudante TESTE 005'),
+('estudante6@teste.com', 6, 'Estudante TESTE 006'),
+('estudante7@teste.com', 7, 'Estudante TESTE 007'),
+('estudante8@teste.com', 8, 'Estudante TESTE 008'),
+('estudante9@teste.com', 9, 'Estudante TESTE 009');
