@@ -8,11 +8,11 @@
 		<version>3.3.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.universidade.api</groupId>
-	<artifactId>gerenciadorDeTurmas</artifactId>
+	<groupId>com.gerenciadordeturmas</groupId>
+	<artifactId>main</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>gerenciadorDeTurmas</name>
-	<description>Demo project for Spring Boot</description>
+	<name>main</name>
+	<description>Project for Spring Boot</description>
 	<url/>
 	<licenses>
 		<license/>
