@@ -1,4 +1,4 @@
-package com.gerenciadordeturmas.service;
+package com.gerenciadordeturmas.main.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.gerenciadordeturmas.model.Turma;
-import com.gerenciadordeturmas.repository.TurmaRepository;
+import com.gerenciadordeturmas.main.model.Turma;
+import com.gerenciadordeturmas.main.repository.TurmaRepository;
 
 @Service
 public class TurmaService {

@@ -1,7 +1,7 @@
-package com.gerenciadordeturmas.repository;
+package com.gerenciadordeturmas.main.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.gerenciadordeturmas.model.Turma;
+import com.gerenciadordeturmas.main.model.Turma;
 
 public interface TurmaRepository extends JpaRepository<Turma, Long> {}

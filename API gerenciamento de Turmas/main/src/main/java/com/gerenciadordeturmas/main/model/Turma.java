@@ -1,4 +1,4 @@
-package com.gerenciadordeturmas.model;
+package com.gerenciadordeturmas.main.model;
 
 import java.util.List;
 

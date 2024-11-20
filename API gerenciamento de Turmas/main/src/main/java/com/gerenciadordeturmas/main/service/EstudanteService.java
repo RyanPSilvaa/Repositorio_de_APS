@@ -1,47 +1,47 @@
-package com.gerenciadordeturmas.service;
-
-import java.util.Optional;
-import java.util.List;
+package com.gerenciadordeturmas.main.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.gerenciadordeturmas.model.Curso;
-import com.gerenciadordeturmas.repository.CursoRepository;
+import com.gerenciadordeturmas.main.model.Estudante;
+import com.gerenciadordeturmas.main.repository.EstudanteRepository;
+
+import java.util.List;
+import java.util.Optional;
 
 @Service
-public class CursoService {
+public class EstudanteService {
     @Autowired
-    private CursoRepository repository;
+    private EstudanteRepository repository;
 
-    public List<Curso> findAll() {
+    public List<Estudante> findAll() {
         return repository.findAll();
     }
 
-    public Optional<Curso> findById(Long id) {
+    public Optional<Estudante> findById(Long id) {
         return repository.findById(id);
     }
 
-    public Curso save(Curso curso) {
-        return repository.save(curso);
+    public Estudante save(Estudante estudante) {
+        return repository.save(estudante);
     }
 
     public void deleteById(Long id) {
         repository.deleteById(id);
     }
 
-    public List<Curso> listarTodos() {
-
+    public List<Estudante> listarTodos() {
+        
         throw new UnsupportedOperationException("Unimplemented method 'listarTodos'");
     }
 
     public Object buscarPorId(Long id) {
-
+        
         throw new UnsupportedOperationException("Unimplemented method 'buscarPorId'");
     }
 
-    public Object atualizar(Long id, Curso curso) {
-
+    public Object atualizar(Long id, Estudante estudante) {
+        
         throw new UnsupportedOperationException("Unimplemented method 'atualizar'");
     }
 }

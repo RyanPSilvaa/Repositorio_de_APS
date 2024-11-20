@@ -1,10 +1,10 @@
-package com.gerenciadordeturmas.service;
+package com.gerenciadordeturmas.main.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.gerenciadordeturmas.model.Professor;
-import com.gerenciadordeturmas.repository.ProfessorRepository;
+import com.gerenciadordeturmas.main.model.Professor;
+import com.gerenciadordeturmas.main.repository.ProfessorRepository;
 
 import java.util.List;
 import java.util.Optional;

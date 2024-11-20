@@ -1,10 +1,10 @@
-package com.gerenciadordeturmas.controller;
+package com.gerenciadordeturmas.main.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.gerenciadordeturmas.model.Curso;
-import com.gerenciadordeturmas.repository.CursoRepository;
+import com.gerenciadordeturmas.main.model.Curso;
+import com.gerenciadordeturmas.main.repository.CursoRepository;
 
 import java.util.List;
 import java.util.Optional;

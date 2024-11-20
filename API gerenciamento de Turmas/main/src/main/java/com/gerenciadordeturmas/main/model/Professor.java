@@ -1,4 +1,4 @@
-package com.gerenciadordeturmas.model;
+package com.gerenciadordeturmas.main.model;
 
 import java.util.List;
 
@@ -9,14 +9,14 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
 @Entity
-public class Curso {
+public class Professor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    private String descricao;
+    private String departamento;
 
-    @OneToMany(mappedBy = "curso")
+    @OneToMany(mappedBy = "professor")
     private List<Turma> turmas;
 
     public Long getId() {
@@ -35,12 +35,12 @@ public class Curso {
         this.nome = nome;
     }
 
-    public String getDescricao() {
-        return descricao;
+    public String getDepartamento() {
+        return departamento;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setDepartamento(String departamento) {
+        this.departamento = departamento;
     }
 
     public List<Turma> getTurmas() {
@@ -52,6 +52,5 @@ public class Curso {
     }
 
     
+
 }
-
-

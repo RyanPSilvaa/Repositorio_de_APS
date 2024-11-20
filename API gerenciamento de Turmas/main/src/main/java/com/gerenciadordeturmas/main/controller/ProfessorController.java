@@ -1,4 +1,4 @@
-package com.gerenciadordeturmas.controller;
+package com.gerenciadordeturmas.main.controller;
 
 import java.util.List;
 
@@ -12,32 +12,32 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.gerenciadordeturmas.model.Turma;
-import com.gerenciadordeturmas.service.TurmaService;
+import com.gerenciadordeturmas.main.model.Professor;
+import com.gerenciadordeturmas.main.service.ProfessorService;
 
 @RestController
-@RequestMapping("/turmas")
-public class TurmaController {
+@RequestMapping("/professores")
+public class ProfessorController {
     @Autowired
-    private TurmaService turmaService;
+    private ProfessorService professorService;
 
     @GetMapping
-    public List<Turma> listarTodas() {
-        return turmaService.listarTodas();
+    public List<Professor> listarTodos() {
+        return professorService.listarTodos();
     }
 
     @PostMapping
-    public Turma salvar(@RequestBody Turma turma) {
-        return turmaService.salvar(turma);
+    public Professor salvar(@RequestBody Professor professor) {
+        return professorService.salvar(professor);
     }
 
     @PutMapping("/{id}")
-    public Turma atualizar(@PathVariable Long id, @RequestBody Turma turma) {
-        return turmaService.atualizar(id, turma);
+    public Professor atualizar(@PathVariable Long id, @RequestBody Professor professor) {
+        return (Professor) professorService.atualizar(id, professor);
     }
 
     @DeleteMapping("/{id}")
     public void excluir(@PathVariable Long id) {
-        turmaService.excluir(id);
+        professorService.excluir(id);
     }
 }
