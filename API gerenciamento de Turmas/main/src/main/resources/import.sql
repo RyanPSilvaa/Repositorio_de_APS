@@ -1,6 +1,5 @@
 
 
-
 INSERT INTO CURSO(NOME) VALUES ('Engenharia de Software'), ('Licenciatura da Computação'), ('Design e Computação');
 
 INSERT INTO PROFESSOR(NOME, EMAIL) VALUES ('Prof. João', 'joao@universidade.com'), ('Prof. Ana', 'ana@universidade.com');
