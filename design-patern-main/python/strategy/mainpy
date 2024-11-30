@@ -1,0 +1,15 @@
+from Bill import Bill
+from RegularCustomerDiscount import RegularCustomerDiscount
+from VIPCustomerDiscount import VIPCustomerDiscount
+from NoDiscount import NoDiscount
+
+# Exemplo de uso
+if __name__ == "__main__":
+    bill = Bill(RegularCustomerDiscount())
+    print("Regular customer:", bill.calculate_final_amount(100.0))
+
+    bill.set_discount_strategy(VIPCustomerDiscount())
+    print("VIP customer:", bill.calculate_final_amount(100.0))
+
+    bill.set_discount_strategy(NoDiscount())
+    print("No discount:", bill.calculate_final_amount(100.0))
