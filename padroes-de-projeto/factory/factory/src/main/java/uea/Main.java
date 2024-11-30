@@ -2,6 +2,10 @@ package uea;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        FactoryTransport factory = new FactoryTransport();
+
+        Transport transport  = factory.criarTransporte(tipo:"carro")
+        
+        Transport.dirigir();
     }
 }
