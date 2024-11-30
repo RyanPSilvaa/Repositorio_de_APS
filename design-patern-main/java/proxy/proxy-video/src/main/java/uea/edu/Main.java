@@ -9,5 +9,6 @@ public class Main {
         videoService.playVideo("Filme de Ação");
         videoService.playVideo("Desenho Animado");
         videoService.playVideo("Filme de Violência");
+        videoService.playVideo("Filme de Conteúdo Adulto");
     }
 }
