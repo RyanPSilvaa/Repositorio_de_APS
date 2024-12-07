@@ -1,13 +1,13 @@
-package projetoAP2.projetopratico;
+package com.universidade.gerenciador.universidade.gerenciador;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProjetopraticoApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProjetopraticoApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }

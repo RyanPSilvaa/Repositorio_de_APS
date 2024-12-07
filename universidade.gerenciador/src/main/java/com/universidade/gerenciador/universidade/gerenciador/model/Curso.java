@@ -1,18 +1,19 @@
-package projetoAP2.projetopratico.model;
+package com.universidade.gerenciador.universidade.gerenciador.model;
 
-import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import java.util.List;
 
 @Entity
 public class Curso {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String nome;
 
     @OneToMany(mappedBy = "curso")
@@ -42,5 +43,7 @@ public class Curso {
         this.atividades = atividades;
     }
 
+    // Getters e Setters
     
 }
+
