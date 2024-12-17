@@ -1,13 +1,13 @@
-package com.universidade.gerenciador.universidade.gerenciador;
+package universidade.universidade_gerenciador;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application {
+public class UniversidadeGerenciadorApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(UniversidadeGerenciadorApplication.class, args);
 	}
 
 }

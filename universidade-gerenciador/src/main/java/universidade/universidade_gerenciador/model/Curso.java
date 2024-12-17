@@ -1,5 +1,4 @@
-package com.universidade.gerenciador.universidade.gerenciador.model;
-
+package universidade.universidade_gerenciador.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,7 +12,6 @@ public class Curso {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String nome;
 
     @OneToMany(mappedBy = "curso")
@@ -46,4 +44,3 @@ public class Curso {
     // Getters e Setters
     
 }
-
