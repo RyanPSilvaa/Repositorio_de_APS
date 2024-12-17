@@ -1,4 +1,4 @@
-package universidade.universidade_gerenciador;
+package gerenciador.universidade_gerenciador;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
