@@ -3,6 +3,8 @@ package gerenciador.universidade_gerenciador.model;
 import jakarta.persistence.*;
 import java.time.LocalDate;
 
+import gerenciador.universidade_gerenciador.dto.AtividadeDTO;
+
 @Entity
 public class Atividade {
 
@@ -91,6 +93,56 @@ public class Atividade {
 
     public void setData(LocalDate data) {
         this.data = data;
+    }
+
+    public void setCategoriaPrincipal(Object categoriaPrincipal) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setCategoriaPrincipal'");
+    }
+
+    public void setPublicoAlvo(Object publicoAlvo) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setPublicoAlvo'");
+    }
+
+    public void setStatusPublicacao(Object statusPublicacao) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setStatusPublicacao'");
+    }
+
+    public Object getCategoriaPrincipal() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getCategoriaPrincipal'");
+    }
+
+    public Object getPublicoAlvo() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getPublicoAlvo'");
+    }
+
+    public Object getStatusPublicacao() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getStatusPublicacao'");
+    }
+
+    public Object getDataCriacao() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getDataCriacao'");
+    }
+
+    public AtividadeDTO getCurso() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getCurso'");
+    }
+
+    public void setDataCriacao(Object dataCriacao) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setDataCriacao'");
+    }
+
+    public void setCurso(Curso curso) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setCurso'");
     }
 }
 

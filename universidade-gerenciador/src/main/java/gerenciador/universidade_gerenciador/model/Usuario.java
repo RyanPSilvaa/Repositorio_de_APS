@@ -68,4 +68,24 @@ public class Usuario {
     public void setAcesso(NivelAcesso acesso) {
         this.acesso = acesso;
     }
+
+    public String getSenha() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getSenha'");
+    }
+
+    public Object getNome() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getNome'");
+    }
+
+    public void setSenha(String encode) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setSenha'");
+    }
+
+    public void setNome(Object nome) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setNome'");
+    }
 }

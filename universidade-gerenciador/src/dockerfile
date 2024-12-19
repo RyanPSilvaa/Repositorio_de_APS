@@ -5,6 +5,7 @@ RUN nvm clean packpge -DskipTests
 
 FROM openjdk:17-jdk-slim
 WORKDIR /app
-COPY --from=build /app/target/*.jar app.jar
+COPY config.yaml /app/config.yaml
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","app.jar"]
+
