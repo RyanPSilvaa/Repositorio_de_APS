@@ -1,9 +1,12 @@
 package gerenciador.universidade_gerenciador.model;
 
-import jakarta.persistence.*;
 import java.time.LocalDate;
 
 import gerenciador.universidade_gerenciador.dto.AtividadeDTO;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 
 @Entity
 public class Atividade {
