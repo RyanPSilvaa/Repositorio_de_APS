@@ -79,42 +79,34 @@ public class AtividadeDTO {
     }
 
     public Object getCategoriaPrincipal() {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getCategoriaPrincipal'");
     }
 
     public Object getPublicoAlvo() {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getPublicoAlvo'");
     }
 
     public Object getStatusPublicacao() {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getStatusPublicacao'");
     }
 
     public void setCategoriaPrincipal(Object categoriaPrincipal) {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'setCategoriaPrincipal'");
     }
 
     public void setPublicoAlvo(Object publicoAlvo) {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'setPublicoAlvo'");
     }
 
     public void setStatusPublicacao(Object statusPublicacao) {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'setStatusPublicacao'");
     }
 
     public void setDataCriacao(Object dataCriacao) {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'setDataCriacao'");
     }
 
     public Object getDataCriacao() {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getDataCriacao'");
     }
 }

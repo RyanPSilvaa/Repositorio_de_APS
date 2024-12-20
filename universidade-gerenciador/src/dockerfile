@@ -1,11 +1,14 @@
-FROM maven:3.8.8-eclipse-temurin-17 AS build
-WORKDIR /app
-COPY . .
-RUN nvm clean packpge -DskipTests
-
+# Usar uma imagem base do OpenJDK
 FROM openjdk:17-jdk-slim
-WORKDIR /app
-COPY config.yaml /app/config.yaml
-EXPOSE 8080
-ENTRYPOINT ["java","-jar","app.jar"]
 
+# Configurar o diretório de trabalho dentro do container
+WORKDIR /app
+
+# Copiar o arquivo JAR gerado pelo Maven/Gradle para o container
+COPY target/universidade-gerenciador-0.0.1-SNAPSHOT.jar app.jar
+
+# Expor a porta que o Spring Boot utiliza
+EXPOSE 8080
+
+# Comando para rodar a aplicação
+ENTRYPOINT ["java", "-jar", "app.jar"]
