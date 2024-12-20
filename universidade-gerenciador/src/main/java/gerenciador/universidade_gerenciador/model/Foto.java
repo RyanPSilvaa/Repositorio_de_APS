@@ -28,23 +28,18 @@ public class Foto {
     }
 }
     public void setNomeArquivo(String originalFilename) {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'setNomeArquivo'");
     }
     public void setTipoArquivo(String contentType) {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'setTipoArquivo'");
     }
     public void setDados(byte[] bytes) {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'setDados'");
     }
     public void setLegenda(String legenda) {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'setLegenda'");
     }
     public void setAtividade(Atividade atividade) {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'setAtividade'");
     }
 
