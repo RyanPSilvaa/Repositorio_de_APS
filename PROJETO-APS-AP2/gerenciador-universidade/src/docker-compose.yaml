@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  h2-database:
+    image: oscarfonts/h2
+    container_name: gerenciadoruniversidade
+    ports:
+      - "8080:8080" # Porta padrão do H2 Database
+    environment:
+      - H2_OPTIONS=-ifNotExists
+    volumes:
+      - ./data:/opt/h2-data # Persistir os dados localmente
