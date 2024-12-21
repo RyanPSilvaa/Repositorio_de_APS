@@ -1,5 +1,4 @@
 package edu.com.br.gerenciamentoDeTurmas.security;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
@@ -22,21 +21,20 @@ public class SecurityConfig {
 
         userDetailsManager.createUser(
                 User.withUsername("admin")
-                    .password(encoder.encode("admin123"))
-                    .roles("ADMIN")
-                    .build());
+                .password(encoder.encode("admin123"))
+                .roles("ADMIN")
+                .build());
 
-        userDetailsManager.createUser(
-                User.withUsername("gerente")
-                    .password(encoder.encode("gerente123"))
-                    .roles("GERENTE")
-                    .build());
+        userDetailsManager.createUser(User.withUsername("gerente")
+                .password(encoder.encode("gerente123"))
+                .roles("GERENTE")
+                .build());
 
-        userDetailsManager.createUser(
-                User.withUsername("secretaria")
-                    .password(encoder.encode("secretaria123"))
-                    .roles("SECRETARIA")
-                    .build());
+        userDetailsManager.createUser(User.withUsername("secretaria")
+                .password(encoder.encode("secretaria123"))
+                .roles("SECRETARIA")
+                .build());
+
 
         return userDetailsManager;
     }
@@ -52,17 +50,13 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
-                                "/public/**",
-                                "/login",
-                                "/error"
-                        ).permitAll()
-                        .requestMatchers("/h2-console/**").permitAll()
-                        .requestMatchers("/swagger-ui/*", "/v3/api-docs/*").authenticated()
-                        .requestMatchers("/admin/**").hasRole("ADMIN")
-                        .requestMatchers("/gerente/**").hasRole("GERENTE")
-                        .requestMatchers("/secretaria/**").hasRole("SECRETARIA")
-                        .anyRequest().authenticated());// Para permitir H2-console
-
+                        "/cursos/**",
+                                "/fotos/**",
+                                "/categorias/**",
+                                "/atividades/**"
+                                ).permitAll()
+                        .anyRequest().authenticated())
+                .httpBasic(Customizer.withDefaults());
         return http.build();
     }
 }
