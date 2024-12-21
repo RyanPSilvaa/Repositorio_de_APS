@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "GerenciamentoDeTurmasApplication",
+            "request": "launch",
+            "mainClass": "edu.com.br.gerenciamentoDeTurmas.GerenciamentoDeTurmasApplication",
+            "projectName": "gerenciamentoDeTurmas"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-GerenciadorUniversidadeApplication<gerenciador-universidade>",
             "request": "launch",
             "cwd": "${workspaceFolder}",

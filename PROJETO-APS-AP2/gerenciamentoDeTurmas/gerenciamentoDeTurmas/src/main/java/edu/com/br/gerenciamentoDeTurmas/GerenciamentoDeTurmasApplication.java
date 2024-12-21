@@ -9,5 +9,5 @@ public class GerenciamentoDeTurmasApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(GerenciamentoDeTurmasApplication.class, args);
 	}
-
+	
 }
