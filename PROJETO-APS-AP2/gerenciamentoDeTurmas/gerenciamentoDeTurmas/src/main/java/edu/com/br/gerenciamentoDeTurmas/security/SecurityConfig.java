@@ -2,25 +2,43 @@ package edu.com.br.gerenciamentoDeTurmas.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
 @Configuration
-@EnableWebSecurity
+@EnableMethodSecurity
 public class SecurityConfig {
 
-    @SuppressWarnings("unused")
-private final UserDetailsService userDetailsService;
-    private final AuthenticationSuccessHandler customAuthenticationSuccessHandler;
+    @Bean
+    public UserDetailsService userDetailsService(PasswordEncoder encoder) {
+        var userDetailsManager = new InMemoryUserDetailsManager();
 
-    public SecurityConfig(UserDetailsService userDetailsService, AuthenticationSuccessHandler customAuthenticationSuccessHandler) {
-        this.userDetailsService = userDetailsService;
-        this.customAuthenticationSuccessHandler = customAuthenticationSuccessHandler;
+        userDetailsManager.createUser(
+                User.withUsername("admin")
+                    .password(encoder.encode("admin123"))
+                    .roles("ADMIN")
+                    .build());
+
+        userDetailsManager.createUser(
+                User.withUsername("gerente")
+                    .password(encoder.encode("gerente123"))
+                    .roles("GERENTE")
+                    .build());
+
+        userDetailsManager.createUser(
+                User.withUsername("secretaria")
+                    .password(encoder.encode("secretaria123"))
+                    .roles("SECRETARIA")
+                    .build());
+
+        return userDetailsManager;
     }
 
     @Bean
@@ -28,33 +46,22 @@ private final UserDetailsService userDetailsService;
         return new BCryptPasswordEncoder();
     }
 
-    @SuppressWarnings("removal")
-@Bean
+    @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .csrf(csrf -> csrf.disable())
-                .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/public/**", "/login", "/error").permitAll()
-                        .requestMatchers("/h2-console/**").authenticated()
-                        .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").authenticated()
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers(
+                                "/public/**",
+                                "/login",
+                                "/error"
+                        ).permitAll()
+                        .requestMatchers("/h2-console/**").permitAll()
+                        .requestMatchers("/swagger-ui/*", "/v3/api-docs/*").authenticated()
                         .requestMatchers("/admin/**").hasRole("ADMIN")
                         .requestMatchers("/gerente/**").hasRole("GERENTE")
-                        .requestMatchers("/secretario/**").hasRole("SECRETARIO")
-                        .anyRequest().authenticated()
-                )
-                .formLogin(form -> form
-                        .loginPage("/login")
-                        .successHandler(customAuthenticationSuccessHandler)
-                        .failureUrl("/login?error=true")
-                        .permitAll()
-                )
-                .logout(logout -> logout
-                        .logoutSuccessUrl("/login?logout=true")
-                        .invalidateHttpSession(true)
-                        .clearAuthentication(true)
-                        .permitAll()
-                )
-                .headers(headers -> headers.frameOptions().sameOrigin());
+                        .requestMatchers("/secretaria/**").hasRole("SECRETARIA")
+                        .anyRequest().authenticated());// Para permitir H2-console
 
         return http.build();
     }
