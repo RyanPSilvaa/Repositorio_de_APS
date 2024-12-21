@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-GerenciadorUniversidadeApplication<gerenciador-universidade>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "gerenciador.gerenciador_universidade.GerenciadorUniversidadeApplication",
+            "projectName": "gerenciador-universidade",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

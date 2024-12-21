@@ -33,7 +33,7 @@ public class SecurityConfig {
 
         userDetailsManager.createUser(User.withUsername("public")
                 .password(encoder.encode("public123"))
-                .roles("PUBLIC")
+                .roles("GERENTE")
                 .build());
 
         return userDetailsManager;
